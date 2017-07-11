@@ -1,2 +1,2 @@
 # cl-vrpn
-VRPN bindings for CommonLips
+VRPN bindings for CommonLisp
