@@ -169,41 +169,41 @@ template <typename T> T SwigValueInit() {
 #include <stdlib.h>
 
 
-/* #include "../vrpn_Types.h" */
-/* #include "../vrpn_Configure.h" */
-#include "../vrpn_BaseClass.h"
-#include "../vrpn_Analog.h"
+/* #include "vrpn_Types.h" */
+/* #include "vrpn_Configure.h" */
+#include "vrpn_BaseClass.h"
+#include "vrpn_Analog.h"
 	#include <time.h>
-/* #include "../vrpn_Analog_Output.h" */
-/* #include "../vrpn_Analog_USDigital_A2.h" */
-/* #include "../vrpn_Auxiliary_Logger.h" */
-/* #include "../vrpn_Connection.h" */
-#include "../vrpn_Button.h"
-/* #include "../vrpn_Button_NI_DIO24.h" */
-/* #include "../vrpn_Button_USB.h" */
-/* #include "../vrpn_Dial.h" */
-/* #include "../vrpn_ForceDevice.h" */
-/* #include "../vrpn_ForceDeviceServer.h" */
-/* #include "../vrpn_Poser.h" */
-/* #include "../vrpn_Poser_Analog.h" */
-/* #include "../vrpn_Poser_Tek4662.h" */
-/* #include "../vrpn_Text.h" */
-#include "../vrpn_Tracker.h"
-/* #include "../vrpn_Tracker_3DMouse.h" */
-/* #include "../vrpn_Tracker_AnalogFly.h" */
-/* #include "../vrpn_Tracker_ButtonFly.h" */
-/* #include "../vrpn_Tracker_Crossbow.h" */
-/* #include "../vrpn_Tracker_DTrack.h" */
-/* #include "../vrpn_Tracker_Fastrak.h" */
-/* #include "../vrpn_Tracker_Liberty.h" */
-/* #include "../vrpn_Tracker_MotionNode.h" */
-/* #include "../vrpn_Tracker_isense.h" */
-#include "../quat/quat.h"
+/* #include "vrpn_Analog_Output.h" */
+/* #include "vrpn_Analog_USDigital_A2.h" */
+/* #include "vrpn_Auxiliary_Logger.h" */
+/* #include "vrpn_Connection.h" */
+#include "vrpn_Button.h"
+/* #include "vrpn_Button_NI_DIO24.h" */
+/* #include "vrpn_Button_USB.h" */
+/* #include "vrpn_Dial.h" */
+/* #include "vrpn_ForceDevice.h" */
+/* #include "vrpn_ForceDeviceServer.h" */
+/* #include "vrpn_Poser.h" */
+/* #include "vrpn_Poser_Analog.h" */
+/* #include "vrpn_Poser_Tek4662.h" */
+/* #include "vrpn_Text.h" */
+#include "vrpn_Tracker.h"
+/* #include "vrpn_Tracker_3DMouse.h" */
+/* #include "vrpn_Tracker_AnalogFly.h" */
+/* #include "vrpn_Tracker_ButtonFly.h" */
+/* #include "vrpn_Tracker_Crossbow.h" */
+/* #include "vrpn_Tracker_DTrack.h" */
+/* #include "vrpn_Tracker_Fastrak.h" */
+/* #include "vrpn_Tracker_Liberty.h" */
+/* #include "vrpn_Tracker_MotionNode.h" */
+/* #include "vrpn_Tracker_isense.h" */
+#include "quat.h"
 
 EXPORT vrpn_BaseClassUnique *_wrap_new_vrpn_BaseClassUnique () {
   vrpn_BaseClassUnique * lresult = (vrpn_BaseClassUnique *)0 ;
   vrpn_BaseClassUnique *result = 0 ;
-  
+
   try {
     result = (vrpn_BaseClassUnique *)new vrpn_BaseClassUnique();
     lresult = result;
@@ -216,13 +216,13 @@ EXPORT vrpn_BaseClassUnique *_wrap_new_vrpn_BaseClassUnique () {
 
 EXPORT void _wrap_vrpn_BaseClass_mainloop (vrpn_BaseClass *larg1) {
   vrpn_BaseClass *arg1 = (vrpn_BaseClass *) 0 ;
-  
+
   arg1 = larg1;
   try {
     (arg1)->mainloop();
-    
+
   } catch (...) {
-    
+
   }
 }
 
@@ -232,7 +232,7 @@ EXPORT vrpn_Analog_Remote *_wrap_new_vrpn_Analog_Remote__SWIG_0 (char *larg1, vr
   char *arg1 = (char *) 0 ;
   vrpn_Connection *arg2 = (vrpn_Connection *) 0 ;
   vrpn_Analog_Remote *result = 0 ;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   try {
@@ -249,7 +249,7 @@ EXPORT vrpn_Analog_Remote *_wrap_new_vrpn_Analog_Remote__SWIG_1 (char *larg1) {
   vrpn_Analog_Remote * lresult = (vrpn_Analog_Remote *)0 ;
   char *arg1 = (char *) 0 ;
   vrpn_Analog_Remote *result = 0 ;
-  
+
   arg1 = larg1;
   try {
     result = (vrpn_Analog_Remote *)new vrpn_Analog_Remote((char const *)arg1);
@@ -263,13 +263,13 @@ EXPORT vrpn_Analog_Remote *_wrap_new_vrpn_Analog_Remote__SWIG_1 (char *larg1) {
 
 EXPORT void _wrap_vrpn_Analog_Remote_mainloop (vrpn_Analog_Remote *larg1) {
   vrpn_Analog_Remote *arg1 = (vrpn_Analog_Remote *) 0 ;
-  
+
   arg1 = larg1;
   try {
     (arg1)->mainloop();
-    
+
   } catch (...) {
-    
+
   }
 }
 
@@ -280,7 +280,7 @@ EXPORT int _wrap_vrpn_Analog_Remote_register_change_handler (vrpn_Analog_Remote 
   void *arg2 = (void *) 0 ;
   vrpn_ANALOGCHANGEHANDLER arg3 = (vrpn_ANALOGCHANGEHANDLER) 0 ;
   int result;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   arg3 = larg3;
@@ -300,7 +300,7 @@ EXPORT int _wrap_vrpn_Analog_Remote_unregister_change_handler (vrpn_Analog_Remot
   void *arg2 = (void *) 0 ;
   vrpn_ANALOGCHANGEHANDLER arg3 = (vrpn_ANALOGCHANGEHANDLER) 0 ;
   int result;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   arg3 = larg3;
@@ -319,7 +319,7 @@ EXPORT vrpn_Button_Remote *_wrap_new_vrpn_Button_Remote__SWIG_0 (char *larg1, vr
   char *arg1 = (char *) 0 ;
   vrpn_Connection *arg2 = (vrpn_Connection *) 0 ;
   vrpn_Button_Remote *result = 0 ;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   try {
@@ -336,7 +336,7 @@ EXPORT vrpn_Button_Remote *_wrap_new_vrpn_Button_Remote__SWIG_1 (char *larg1) {
   vrpn_Button_Remote * lresult = (vrpn_Button_Remote *)0 ;
   char *arg1 = (char *) 0 ;
   vrpn_Button_Remote *result = 0 ;
-  
+
   arg1 = larg1;
   try {
     result = (vrpn_Button_Remote *)new vrpn_Button_Remote((char const *)arg1);
@@ -350,13 +350,13 @@ EXPORT vrpn_Button_Remote *_wrap_new_vrpn_Button_Remote__SWIG_1 (char *larg1) {
 
 EXPORT void _wrap_vrpn_Button_Remote_mainloop (vrpn_Button_Remote *larg1) {
   vrpn_Button_Remote *arg1 = (vrpn_Button_Remote *) 0 ;
-  
+
   arg1 = larg1;
   try {
     (arg1)->mainloop();
-    
+
   } catch (...) {
-    
+
   }
 }
 
@@ -367,7 +367,7 @@ EXPORT int _wrap_vrpn_Button_Remote_register_change_handler (vrpn_Button_Remote 
   void *arg2 = (void *) 0 ;
   vrpn_BUTTONCHANGEHANDLER arg3 = (vrpn_BUTTONCHANGEHANDLER) 0 ;
   int result;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   arg3 = larg3;
@@ -387,7 +387,7 @@ EXPORT int _wrap_vrpn_Button_Remote_unregister_change_handler (vrpn_Button_Remot
   void *arg2 = (void *) 0 ;
   vrpn_BUTTONCHANGEHANDLER arg3 = (vrpn_BUTTONCHANGEHANDLER) 0 ;
   int result;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   arg3 = larg3;
@@ -406,7 +406,7 @@ EXPORT vrpn_Tracker_Remote *_wrap_new_vrpn_Tracker_Remote__SWIG_0 (char *larg1, 
   char *arg1 = (char *) 0 ;
   vrpn_Connection *arg2 = (vrpn_Connection *) 0 ;
   vrpn_Tracker_Remote *result = 0 ;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   try {
@@ -423,7 +423,7 @@ EXPORT vrpn_Tracker_Remote *_wrap_new_vrpn_Tracker_Remote__SWIG_1 (char *larg1) 
   vrpn_Tracker_Remote * lresult = (vrpn_Tracker_Remote *)0 ;
   char *arg1 = (char *) 0 ;
   vrpn_Tracker_Remote *result = 0 ;
-  
+
   arg1 = larg1;
   try {
     result = (vrpn_Tracker_Remote *)new vrpn_Tracker_Remote((char const *)arg1);
@@ -437,13 +437,13 @@ EXPORT vrpn_Tracker_Remote *_wrap_new_vrpn_Tracker_Remote__SWIG_1 (char *larg1) 
 
 EXPORT void _wrap_vrpn_Tracker_Remote_mainloop (vrpn_Tracker_Remote *larg1) {
   vrpn_Tracker_Remote *arg1 = (vrpn_Tracker_Remote *) 0 ;
-  
+
   arg1 = larg1;
   try {
     (arg1)->mainloop();
-    
+
   } catch (...) {
-    
+
   }
 }
 
@@ -454,7 +454,7 @@ EXPORT int _wrap_vrpn_Tracker_Remote_register_change_handler (vrpn_Tracker_Remot
   void *arg2 = (void *) 0 ;
   vrpn_TRACKERCHANGEHANDLER arg3 = (vrpn_TRACKERCHANGEHANDLER) 0 ;
   int result;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   arg3 = larg3;
@@ -474,7 +474,7 @@ EXPORT int _wrap_vrpn_Tracker_Remote_unregister_change_handler (vrpn_Tracker_Rem
   void *arg2 = (void *) 0 ;
   vrpn_TRACKERCHANGEHANDLER arg3 = (vrpn_TRACKERCHANGEHANDLER) 0 ;
   int result;
-  
+
   arg1 = larg1;
   arg2 = larg2;
   arg3 = larg3;
