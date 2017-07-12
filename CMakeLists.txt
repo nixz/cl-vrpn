@@ -20,5 +20,5 @@ endif()
 
 find_library(VRPN_LIBRARY vrpn)
 include_directories(${VRPN_INCLUDE_DIR} ${VRPN_LIBUSB_INCLUDE_DIR})
-add_library(cl-vrpn cl-vrpnCFFI_wrap.cxx)
+add_library(cl-vrpn SHARED cl-vrpnCFFI_wrap.cxx)
 target_link_libraries (cl-vrpn LINK_PRIVATE "${VRPN_LIBRARY}")
