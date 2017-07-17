@@ -163,18 +163,18 @@ void VRPN_CALLBACK handle_analog(void *userdata, const vrpn_ANALOGCB a)
     int i;
     const char *name = (const char *)userdata;
 
-    printf("Analog %s:\n         %5.2f", name, a.channel[0]);
+    printf("(analog :name %s :total %d  :channels `(%f", name, a.num_channel, a.channel[0]);
     for (i = 1; i < a.num_channel; i++) {
-        printf(", %5.2f", a.channel[i]);
+        printf(" %f", a.channel[i]);
     }
-    printf(" (%d chans)\n", a.num_channel);
+    printf("))\n");
 }
 
 void VRPN_CALLBACK handle_dial(void *userdata, const vrpn_DIALCB d)
 {
     const char *name = (const char *)userdata;
 
-    printf("Dial %s, number %d was moved by %5.2f\n", name, d.dial, d.change);
+    printf("(dial :name %s :number %d :moved-by %f)\n", name, d.dial, d.change);
 }
 
 void VRPN_CALLBACK handle_text(void *userdata, const vrpn_TEXTCB t)
