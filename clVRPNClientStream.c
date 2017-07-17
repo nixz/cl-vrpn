@@ -219,7 +219,7 @@ void Usage(const char *arg0)
     exit(0);
 }
 
-int write(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int print_for_tracker = 1; // Print tracker reports?
     int print_for_button = 1;  // Print button reports?
