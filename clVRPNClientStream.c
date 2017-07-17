@@ -150,12 +150,12 @@ handle_button_states(void *userdata, const vrpn_BUTTONSTATESCB b)
 {
     const char *name = (const char *)userdata;
 
-    printf("Button %s has %d buttons with states:", name, b.num_buttons);
+    printf("(buttons :name %s :total %d :states `(", name, b.num_buttons);
     int i;
     for (i = 0; i < b.num_buttons; i++) {
-        printf(" %d", b.states[i]);
+        printf("%d ", b.states[i]);
     }
-    printf("\n");
+    printf("))\n");
 }
 
 void VRPN_CALLBACK handle_analog(void *userdata, const vrpn_ANALOGCB a)
