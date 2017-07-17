@@ -130,7 +130,7 @@ void VRPN_CALLBACK handle_tracker_acc(void *userdata, const vrpn_TRACKERACCCB t)
     if (++t_data->t_counts[t.sensor] >= tracker_stride) {
         t_data->t_counts[t.sensor] = 0;
         printf("tracker-acc :name %s, :sensor %d :acc (%f, %f, %f) "
-               "quatacc (%f, %f, %f, %f) :dt %f)\n",
+               ":quatacc (%f, %f, %f, %f) :dt %f)\n",
                t_data->t_name, t.sensor, t.acc[0], t.acc[1], t.acc[2],
                t.acc_quat[0], t.acc_quat[1], t.acc_quat[2], t.acc_quat[3],
                t.acc_quat_dt);
