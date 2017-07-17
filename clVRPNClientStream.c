@@ -108,8 +108,8 @@ void VRPN_CALLBACK handle_tracker_vel(void *userdata, const vrpn_TRACKERVELCB t)
     // print this one.  If so, print and reset the count.
     if (++t_data->t_counts[t.sensor] >= tracker_stride) {
         t_data->t_counts[t.sensor] = 0;
-        printf("Tracker %s, sensor %d:\n     vel (%5.2f, %5.2f, %5.2f); "
-               "quatvel (%5.2f, %5.2f, %5.2f, %5.2f), dt %5.2f\n",
+        printf("(tracker-vel :name %s :sensor %d :vel (%f, %f, %f) "
+               "quatvel (%f, %f, %f, %f) :dt %f)\n",
                t_data->t_name, t.sensor, t.vel[0], t.vel[1], t.vel[2],
                t.vel_quat[0], t.vel_quat[1], t.vel_quat[2], t.vel_quat[3],
                t.vel_quat_dt);
