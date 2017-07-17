@@ -183,7 +183,7 @@ void VRPN_CALLBACK handle_text(void *userdata, const vrpn_TEXTCB t)
 
     // Warnings and errors are printed by the system text printer.
     if (t.type == vrpn_TEXT_NORMAL) {
-        printf("%s: Text message: %s\n", name, t.message);
+        printf("(text :name %s :message %s)\n", name, t.message);
     }
 }
 
