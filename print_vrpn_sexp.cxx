@@ -88,7 +88,7 @@ handle_tracker_pos_quat(void *userdata, const vrpn_TRACKERCB t)
     // print this one.  If so, print and reset the count.
     if (++t_data->t_counts[t.sensor] >= tracker_stride) {
         t_data->t_counts[t.sensor] = 0;
-        printf("(tracker-pos :name %s :sensor %d :pos `(%f, %f, %f) "
+        printf("(tracker-pos :name \"%s\" :sensor %d :pos `(%f, %f, %f) "
                ":quat `(%f, %f, %f, %f))\n",
                t_data->t_name, t.sensor, t.pos[0], t.pos[1], t.pos[2],
                t.quat[0], t.quat[1], t.quat[2], t.quat[3]);
@@ -108,7 +108,7 @@ void VRPN_CALLBACK handle_tracker_vel(void *userdata, const vrpn_TRACKERVELCB t)
     // print this one.  If so, print and reset the count.
     if (++t_data->t_counts[t.sensor] >= tracker_stride) {
         t_data->t_counts[t.sensor] = 0;
-        printf("(tracker-vel :name %s :sensor %d :vel `(%f, %f, %f) "
+        printf("(tracker-vel :name \"%s\" :sensor %d :vel `(%f, %f, %f) "
                ":quatvel `(%f, %f, %f, %f) :dt %f)\n",
                t_data->t_name, t.sensor, t.vel[0], t.vel[1], t.vel[2],
                t.vel_quat[0], t.vel_quat[1], t.vel_quat[2], t.vel_quat[3],
@@ -129,7 +129,7 @@ void VRPN_CALLBACK handle_tracker_acc(void *userdata, const vrpn_TRACKERACCCB t)
     // print this one.  If so, print and reset the count.
     if (++t_data->t_counts[t.sensor] >= tracker_stride) {
         t_data->t_counts[t.sensor] = 0;
-        printf("tracker-acc :name %s, :sensor %d :acc `(%f, %f, %f) "
+        printf("tracker-acc :name \"%s\", :sensor %d :acc `(%f, %f, %f) "
                ":quatacc `(%f, %f, %f, %f) :dt %f)\n",
                t_data->t_name, t.sensor, t.acc[0], t.acc[1], t.acc[2],
                t.acc_quat[0], t.acc_quat[1], t.acc_quat[2], t.acc_quat[3],
@@ -141,7 +141,7 @@ void VRPN_CALLBACK handle_button(void *userdata, const vrpn_BUTTONCB b)
 {
     const char *name = (const char *)userdata;
 
-    printf("(button :name %s :number %d :state %d)\n"
+    printf("(button :name \"%s\" :number %d :state %d)\n",
            name, b.button, b.state);
 }
 
@@ -150,7 +150,7 @@ handle_button_states(void *userdata, const vrpn_BUTTONSTATESCB b)
 {
     const char *name = (const char *)userdata;
 
-    printf("(buttons :name %s :total %d :states `(", name, b.num_buttons);
+    printf("(buttons :name \"%s\" :total %d :states `(", name, b.num_buttons);
     int i;
     for (i = 0; i < b.num_buttons; i++) {
         printf("%d ", b.states[i]);
@@ -163,7 +163,7 @@ void VRPN_CALLBACK handle_analog(void *userdata, const vrpn_ANALOGCB a)
     int i;
     const char *name = (const char *)userdata;
 
-    printf("(analog :name %s :total %d  :channels `(%f", name, a.num_channel, a.channel[0]);
+    printf("(analog :name \"%s\" :total %d  :channels `(%f", name, a.num_channel, a.channel[0]);
     for (i = 1; i < a.num_channel; i++) {
         printf(" %f", a.channel[i]);
     }
@@ -174,7 +174,7 @@ void VRPN_CALLBACK handle_dial(void *userdata, const vrpn_DIALCB d)
 {
     const char *name = (const char *)userdata;
 
-    printf("(dial :name %s :number %d :moved-by %f)\n", name, d.dial, d.change);
+    printf("(dial :name \"%s\" :number %d :moved-by %f)\n", name, d.dial, d.change);
 }
 
 void VRPN_CALLBACK handle_text(void *userdata, const vrpn_TEXTCB t)
@@ -183,7 +183,7 @@ void VRPN_CALLBACK handle_text(void *userdata, const vrpn_TEXTCB t)
 
     // Warnings and errors are printed by the system text printer.
     if (t.type == vrpn_TEXT_NORMAL) {
-        printf("(text :name %s :message %s)\n", name, t.message);
+        printf("(text :name \"%s\" :message %s)\n", name, t.message);
     }
 }
 
