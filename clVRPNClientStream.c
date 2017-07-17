@@ -88,8 +88,8 @@ handle_tracker_pos_quat(void *userdata, const vrpn_TRACKERCB t)
     // print this one.  If so, print and reset the count.
     if (++t_data->t_counts[t.sensor] >= tracker_stride) {
         t_data->t_counts[t.sensor] = 0;
-        printf("Tracker %s, sensor %d:\n     pos (%5.2f, %5.2f, %5.2f); "
-               "quat (%5.2f, %5.2f, %5.2f, %5.2f)\n",
+        printf("(tracker-pos :name %s :sensor %d :pos `(%f, %f, %f) "
+               ":quat `(%f, %f, %f, %f))\n",
                t_data->t_name, t.sensor, t.pos[0], t.pos[1], t.pos[2],
                t.quat[0], t.quat[1], t.quat[2], t.quat[3]);
     }
