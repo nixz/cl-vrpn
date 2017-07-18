@@ -32,6 +32,7 @@
 ;;;; ==========================================================================
 
 (ql:quickload :external-program)
+(ql:quickload :cl-async)
 
 (defparameter *process*
   (external-program:start "/home/nshetty/lisp/cl-vrpn/build/print-vrpn-sexp"
